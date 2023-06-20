@@ -1,10 +1,9 @@
-function modalAnimation() {
-    let animation = document.getElementById("modal-animation");
-  
-    if (animation.style.display === "none") {
-      animation.style.display = "block";
-    } else {
-      animation.style.display = "none";
-    }
-  }
-  
+// function modalAnimation(){
+//   let textAnimation = document.getElementById('modal-animation');
+
+//   if(textAnimation.style.display === "none") {
+//     textAnimation.style.display = "block";
+//   } else {
+//     textAnimation.style.display = "none"
+//   }
+// }
