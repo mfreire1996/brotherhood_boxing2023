@@ -111,16 +111,25 @@ a {
   }
 }
 .form {
-  display: grid;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-content: center;
+  position: relative;
   line-height: 3;
   background: #ffffff;
   width: 50%;
   padding: 5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form img {
+  width: 35%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 .form input {
   border: 0;

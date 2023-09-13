@@ -1,9 +1,24 @@
-// function modalAnimation(){
-//   let textAnimation = document.getElementById('modal-animation');
+document.getElementsByClassName('form').addEventListener("submit", function (event){
+    event.preventDefault();
 
-//   if(textAnimation.style.display === "none") {
-//     textAnimation.style.display = "block";
-//   } else {
-//     textAnimation.style.display = "none"
-//   }
-// }
+    const form = event.target;
+    const formData = new formData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            Accept: "application/json",
+        },
+    })
+    .then(response => {
+        if(response.ok) {
+            window.location.href = "index.html"
+        } else {
+            console.error("Form submission error", response.statusText)
+        }
+    })
+    .catch(error => {
+        console.error("Network error:", error)
+    });
+});
